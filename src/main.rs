@@ -33,12 +33,12 @@ impl Config{
     }
 }
 
-fn parse_config(args : &[String]) -> Config{
-    let query = args[1].clone();
-    let file_path = args[2].clone();
+// fn parse_config(args : &[String]) -> Config{
+//     let query = args[1].clone();
+//     let file_path = args[2].clone();
 
-    Config { query, file_path}
-}
+//     Config { query, file_path}
+// }
 
 fn run(config: Config) -> Result<(),Box<dyn Error>>{
     let contents = fs::read_to_string(config.file_path)?;
